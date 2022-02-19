@@ -2,6 +2,9 @@ name: "submit"
 on:
   workflow_dispatch:
 
+env:
+  PUPPETEER_EXECUTABLE_PATH: /opt/hostedtoolcache/chromium/961656/x64/chrom
+
 jobs:
   build:
     runs-on: ubuntu-latest
