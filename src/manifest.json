@@ -1,7 +1,7 @@
 {
   "name": "Plasmo Hello",
   "description": "A web extension to test deployment.",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "icons": {
     "16": "assets/icon16.png",
     "48": "assets/icon48.png",
@@ -10,7 +10,7 @@
   "author": "PlasmoCorp",
   "permissions": [],
   "background": {
-    "service_worker": "background/index.js"
+    "scripts": ["background/index.js"]
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
