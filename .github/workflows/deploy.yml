@@ -1,4 +1,4 @@
-name: "submit"
+name: "Deploy with Chrome"
 on:
   workflow_dispatch:
 

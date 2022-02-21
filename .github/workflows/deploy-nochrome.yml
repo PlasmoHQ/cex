@@ -1,4 +1,4 @@
-name: "submit"
+name: "Deploy no Chrome"
 on:
   workflow_dispatch:
 
