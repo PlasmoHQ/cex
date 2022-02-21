@@ -7,16 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@latest
-        with:
-          chrome-version: latest
       - name: Build
         run: sh build.sh
       - name: Browser Plugin Publish
         uses: plasmo-corp/bpp@v1
-        env:
-          PUPPETEER_EXECUTABLE_PATH: /opt/hostedtoolcache/chromium/latest/x64/chrome
         with:
           artifact: "./extension.zip"
           keys: ${{ secrets.SUBMIT_KEYS }}

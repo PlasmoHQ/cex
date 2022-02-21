@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///p%3A/Projects/plasmo-corp/cex/.github/workflows/deploy.yml"
+  }
+}
