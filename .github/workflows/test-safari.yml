@@ -1,9 +1,10 @@
 name: "test-safari"
-on: # rebuild any PRs and main branch changes
-  pull_request:
-  push:
-    branches:
-      - safari
+on:
+  workflow_dispatch:
+  # rebuild any PRs and main branch changes
+  # push:
+  #   branches:
+  #     - safari
 
 jobs:
   build: # make sure build/ci work properly
