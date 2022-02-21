@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  PUPPETEER_EXECUTABLE_PATH: /opt/hostedtoolcache/chromium/961656/x64/chrome
+  PUPPETEER_EXECUTABLE_PATH: /opt/hostedtoolcache/chromium/latest/x64/chrome
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
         with:
-          chrome-version: 961656
+          chrome-version: latest
       - name: Build
         run: sh build.sh
       - name: Browser Plugin Publish
