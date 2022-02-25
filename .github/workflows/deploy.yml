@@ -1,5 +1,6 @@
 name: "Deploy with Chrome"
 on:
+  push:
   workflow_dispatch:
 
 jobs:

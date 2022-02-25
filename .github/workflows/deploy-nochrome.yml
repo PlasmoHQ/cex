@@ -1,5 +1,6 @@
 name: "Deploy no Chrome"
 on:
+  push:
   workflow_dispatch:
 
 jobs:
