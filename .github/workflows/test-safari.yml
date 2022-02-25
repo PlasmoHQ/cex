@@ -36,7 +36,7 @@ jobs:
           echo Hello World
       - name: Setup XCode
       - uses: actions/checkout@v2
-      - uses: plasmo-corp/bpp@v1
+      - uses: plasmo-corp/bpp@safari
         env:
           NODE_ENV: "test"
         with:

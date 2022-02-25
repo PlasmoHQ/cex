@@ -10,7 +10,7 @@ jobs:
       - name: Build
         run: sh build.sh
       - name: Browser Plugin Publish
-        uses: plasmo-corp/bpp@v1
+        uses: plasmo-corp/bpp@dev
         with:
           artifact: "./extension.zip"
           keys: ${{ secrets.SUBMIT_KEYS }}
