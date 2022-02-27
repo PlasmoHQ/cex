@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build
         run: |
-          zip -r extension.zip src/*
+          zip -r0 extension.zip src
       - name: Browser Plugin Publish
         uses: plasmo-corp/bpp@main
         with:
