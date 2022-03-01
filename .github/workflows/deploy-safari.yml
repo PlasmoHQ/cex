@@ -1,0 +1,22 @@
+name: "Deploy to Safari"
+on:
+  workflow_dispatch:
+  # rebuild any PRs and main branch changes
+  # push:
+  #   branches:
+  #     - safari
+
+jobs:
+  build: # make sure build/ci work properly
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: sh build.sh
+      - name: Setup XCode
+      - uses: plasmo-corp/bpp@safari
+        env:
+          NODE_ENV: "test"
+        with:
+          artifact: "./extension.zip"
+          keys: ${{ secrets.SAFARI_KEYS }}

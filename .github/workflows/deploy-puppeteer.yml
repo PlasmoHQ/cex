@@ -1,12 +1,21 @@
-name: "Deploy with Chrome"
+name: "Deploy with Puppeteer"
 on:
   push:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    strategy:
+      matrix:
+        market: [OPERA_KEYS, EDGE_KEYS]
+      fail-fast: false
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Deploy ${{ matrix.market }}"
       - uses: actions/checkout@v2
       - name: Build
         run: sh build.sh
@@ -20,4 +29,4 @@ jobs:
           PUPPETEER_EXECUTABLE_PATH: /opt/hostedtoolcache/chromium/latest/x64/chrome
         with:
           artifact: "./extension.zip"
-          keys: ${{ secrets.SUBMIT_KEYS }}
+          keys: ${{ secrets[matrix.market] }}

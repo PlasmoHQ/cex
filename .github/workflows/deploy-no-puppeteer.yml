@@ -1,12 +1,21 @@
-name: "Deploy no Chrome"
+name: "Deploy without Puppeteer"
 on:
   push:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    strategy:
+      matrix:
+        market: [CHROME_KEYS, FIREFOX_KEYS]
+      fail-fast: false
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Deploy ${{ matrix.market }}"
       - uses: actions/checkout@v2
       - name: Build
         run: |
@@ -16,4 +25,4 @@ jobs:
         uses: plasmo-corp/bpp@main
         with:
           artifact: "./extension.zip"
-          keys: ${{ secrets.SUBMIT_KEYS }}
+          keys: ${{ secrets[matrix.market] }}
