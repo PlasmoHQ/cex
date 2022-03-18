@@ -2,7 +2,6 @@
   "name": "Plasmo Hello",
   "description": "A web extension to test deployment.",
   "manifest_version": 2,
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6GgdxAAXAhb+DY9uYLgwBOY2IRW68r7/kBnfr8NU28SpP0rgjqJs1s2JXtlWE29xDgGIiZJKB00qeGrCiqKqjckXVhHUYeI4ji3VWrUZqf6SKGLgDSbE+X21d35mvJvRR9bjkziUHyBUZsE7gF31bU39M8hvQaynEp2sT8MNKLPso6w13bQ7hiK+Ai6qFYcc97zZbqey2J89IFq6BtgkSphG0Pq7BfQedrj5HZnJnetRc4kSF/j3UK8mp4V4LShMnWQntp5JMmYthBPtxfgn3nveQ5DJQJtOgojrw0oEDHQdEXQVNMmYZiLW2IP7pUefn3orkqO9KofG80iCZ/Ko6QIDAQAB",
   "icons": {
     "16": "assets/icon16.png",
     "48": "assets/icon48.png",
@@ -13,5 +12,5 @@
   "background": {
     "scripts": ["background/index.js"]
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
