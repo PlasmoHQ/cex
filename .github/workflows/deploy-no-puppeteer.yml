@@ -9,10 +9,10 @@ concurrency:
 
 jobs:
   build:
-    # strategy:
-    #   matrix:
-    #     market: [CHROME_KEYS, FIREFOX_KEYS]
-    #   fail-fast: false
+    strategy:
+      matrix:
+        market: [CHROME_KEYS, FIREFOX_KEYS]
+      fail-fast: false
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploy ${{ matrix.market }}"
@@ -25,4 +25,4 @@ jobs:
         uses: plasmo-corp/bpp@main
         with:
           artifact: "./extension.zip"
-          keys: ${{ secrets.SUBMIT_KEYS }}
+          keys: ${{ secrets[matrix.market] }}
