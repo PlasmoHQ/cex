@@ -24,7 +24,7 @@ jobs:
         with:
           chrome-version: latest
       - name: Browser Plugin Publish
-        uses: plasmo-corp/bpp@main
+        uses: PlasmoHQ/bpp@main
         env:
           PUPPETEER_EXECUTABLE_PATH: /opt/hostedtoolcache/chromium/latest/x64/chrome
         with:

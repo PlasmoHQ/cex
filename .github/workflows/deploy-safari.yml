@@ -14,7 +14,7 @@ jobs:
       - name: Build
         run: sh build.sh
       - name: Setup XCode
-      - uses: plasmo-corp/bpp@safari
+      - uses: PlasmoHQ/bpp@safari
         env:
           NODE_ENV: "test"
         with:

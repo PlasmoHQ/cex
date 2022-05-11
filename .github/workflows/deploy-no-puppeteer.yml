@@ -22,7 +22,7 @@ jobs:
           cd src
           zip -r ../extension.zip .
       - name: Browser Plugin Publish
-        uses: plasmo-corp/bpp@main
+        uses: PlasmoHQ/bpp@main
         with:
           artifact: "./extension.zip"
           keys: ${{ secrets[matrix.market] }}
